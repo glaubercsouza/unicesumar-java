@@ -6,9 +6,9 @@ package Dados;
 
 
 public class Pessoa {
-    String  nome;
-    String  telefone;
-    int     idade;
+    public String  nome;
+    public String  telefone;
+    public int     idade;
     
         public Pessoa(){
         idade = 0;
