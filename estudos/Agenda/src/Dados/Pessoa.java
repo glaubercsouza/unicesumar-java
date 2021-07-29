@@ -37,9 +37,7 @@ public class Pessoa {
     }
         
     public Pessoa(){
-        this.setIdade(0);
-        this.setNome("");
-        this.setTelefone("");
+        this("","",0);
     }
         
     public Pessoa(String nom, String tel, int id)
@@ -48,6 +46,11 @@ public class Pessoa {
         this.setTelefone(tel);
         this.setNome(nom);
     }    
+    
+    public Pessoa(Pessoa nova)
+    {
+        this(nova.getNome(), nova.getTelefone(), nova.getIdade());
+    }
         
     public boolean testeIdade(int idade)
     {
@@ -57,15 +60,10 @@ public class Pessoa {
         return false;
     }
         
-    public String mostrarDados(){
-        String retorno = "Nome: " + nome + " Idade: " + idade + " Telefone: "+ telefone;
+    public String mostrarDados()
+    {
+        String retorno = "Nome: " + this.getNome() + " Idade: " + this.getIdade() + " Telefone: "+ this.getTelefone();
         return retorno;
     }
         
-    public Pessoa(Pessoa nova)
-    {
-        this.nome = nova.nome;
-        this.idade = nova.idade;
-        this.telefone = nova.telefone;
-    }
 }

@@ -11,5 +11,10 @@ public class Inicio {
         pes.setTelefone("(00) 7654-3210");
         System.out.println(pes.mostrarDados());
         System.out.println(pes2.mostrarDados());
+        if (pes.getIdade() > pes2.getIdade()){
+            System.out.println(pes.getNome());
+        }else{
+            System.out.println(pes2.getNome());
+        }
     }
 }
