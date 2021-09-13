@@ -1,6 +1,6 @@
 # Unicesumar Java
 
-Repositório criado para organizar os estudos da linguagem Java para o curso de Análise e Desenvolvimento de Sistemas na Unicesumar.
+Repositório criado para organizar os estudos da linguagem Java no curso de Análise e Desenvolvimento de Sistemas na Unicesumar.
 
 ## Links Úteis
 
