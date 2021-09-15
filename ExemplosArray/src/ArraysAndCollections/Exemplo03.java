@@ -1,5 +1,5 @@
 
-package Arrays;
+package ArraysAndCollections;
 
 import java.awt.Container;
 import javax.swing.JApplet;

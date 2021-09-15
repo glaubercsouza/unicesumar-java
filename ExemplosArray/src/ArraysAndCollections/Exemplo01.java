@@ -1,9 +1,9 @@
 
-package Arrays;
+package ArraysAndCollections;
 
 import javax.swing.*;
 
-public class Exemplo1 {
+public class Exemplo01 {
     public static void main(String[] args) {
         int[] array; // declara referência para um array
         array = new int[10]; // cria um array com 10 elementos

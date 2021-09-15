@@ -1,5 +1,5 @@
 
-package Arrays;
+package ArraysAndCollections;
 
 import javax.swing.*;
 
