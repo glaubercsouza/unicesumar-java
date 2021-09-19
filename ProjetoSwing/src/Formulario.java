@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -29,31 +32,31 @@ public class Formulario extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        nomeCampo = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        enderecoCampo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        emailCampo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        telefoneCampo = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        cidadeCampo = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        estadoCampo = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        masculinoCampo = new javax.swing.JRadioButton();
+        femininoCampo = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
+        alemaoCampo = new javax.swing.JCheckBox();
+        espanholCampo = new javax.swing.JCheckBox();
+        francesCampo = new javax.swing.JCheckBox();
+        inglesCampo = new javax.swing.JCheckBox();
+        italianoCampo = new javax.swing.JCheckBox();
+        japonesCampo = new javax.swing.JCheckBox();
         jLabel9 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        motivoCampo = new javax.swing.JTextField();
+        salvar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,9 +68,9 @@ public class Formulario extends javax.swing.JFrame {
 
         jLabel2.setText("ENDEREÇO:");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        enderecoCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                enderecoCampoActionPerformed(evt);
             }
         });
 
@@ -77,25 +80,25 @@ public class Formulario extends javax.swing.JFrame {
 
         jLabel5.setText("CIDADE:");
 
-        jTextField5.setToolTipText("");
+        cidadeCampo.setToolTipText("");
 
         jLabel6.setText("UF:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
+        estadoCampo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
 
         jLabel7.setText("SEXO:");
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Masculino");
-        jRadioButton1.setToolTipText("");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(masculinoCampo);
+        masculinoCampo.setText("Masculino");
+        masculinoCampo.setToolTipText("");
+        masculinoCampo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                masculinoCampoActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Feminino");
+        buttonGroup1.add(femininoCampo);
+        femininoCampo.setText("Feminino");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -113,9 +116,9 @@ public class Formulario extends javax.swing.JFrame {
                         .addComponent(jLabel2)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField3))
+                    .addComponent(nomeCampo, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
+                    .addComponent(enderecoCampo)
+                    .addComponent(emailCampo))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
@@ -125,20 +128,20 @@ public class Formulario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jTextField5)
+                            .addComponent(cidadeCampo)
                             .addGap(18, 18, 18)
                             .addComponent(jLabel6)
                             .addGap(18, 18, 18)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(estadoCampo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(telefoneCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                        .addComponent(masculinoCampo)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)))
+                        .addComponent(femininoCampo)))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField1, jTextField2, jTextField3});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {emailCampo, enderecoCampo, nomeCampo});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,24 +153,24 @@ public class Formulario extends javax.swing.JFrame {
                         .addGap(106, 106, 106))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1)
+                            .addComponent(nomeCampo)
                             .addComponent(jLabel4)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(telefoneCampo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2)
+                            .addComponent(enderecoCampo)
                             .addComponent(jLabel5)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cidadeCampo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel6)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(estadoCampo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(19, 19, 19)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3)
+                            .addComponent(emailCampo)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel7)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2))
+                            .addComponent(masculinoCampo)
+                            .addComponent(femininoCampo))
                         .addGap(26, 26, 26))))
         );
 
@@ -175,21 +178,26 @@ public class Formulario extends javax.swing.JFrame {
 
         jLabel8.setText("SELECIONE O(S) CURSO(S):");
 
-        jCheckBox1.setText("Alemão");
+        alemaoCampo.setText("Alemão");
 
-        jCheckBox2.setText("Espanhol");
+        espanholCampo.setText("Espanhol");
 
-        jCheckBox3.setText("Francês");
+        francesCampo.setText("Francês");
 
-        jCheckBox4.setText("Inglês");
+        inglesCampo.setText("Inglês");
 
-        jCheckBox5.setText("Italiano");
+        italianoCampo.setText("Italiano");
 
-        jCheckBox6.setText("Japonês");
+        japonesCampo.setText("Japonês");
 
         jLabel9.setText("POR QUE SE INTERESSA POR ESSE(S) CURSO(S)?");
 
-        jButton1.setText("SALVAR");
+        salvar.setText("SALVAR");
+        salvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -198,22 +206,22 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
+                    .addComponent(salvar)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 707, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(motivoCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 707, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel9)
                         .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(jCheckBox1)
+                            .addComponent(alemaoCampo)
                             .addGap(18, 18, 18)
-                            .addComponent(jCheckBox2)
+                            .addComponent(espanholCampo)
                             .addGap(18, 18, 18)
-                            .addComponent(jCheckBox3)
+                            .addComponent(francesCampo)
                             .addGap(18, 18, 18)
-                            .addComponent(jCheckBox4)
+                            .addComponent(inglesCampo)
                             .addGap(18, 18, 18)
-                            .addComponent(jCheckBox5)
+                            .addComponent(italianoCampo)
                             .addGap(18, 18, 18)
-                            .addComponent(jCheckBox6))
+                            .addComponent(japonesCampo))
                         .addComponent(jLabel8)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -224,18 +232,18 @@ public class Formulario extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox6))
+                    .addComponent(alemaoCampo)
+                    .addComponent(espanholCampo)
+                    .addComponent(francesCampo)
+                    .addComponent(inglesCampo)
+                    .addComponent(italianoCampo)
+                    .addComponent(japonesCampo))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(motivoCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(salvar)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -263,14 +271,78 @@ public class Formulario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void enderecoCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enderecoCampoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_enderecoCampoActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void masculinoCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masculinoCampoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_masculinoCampoActionPerformed
 
+    private void salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarActionPerformed
+       Cadastro objCadastro = new Cadastro();
+       
+       objCadastro.setNome(nomeCampo.getText());
+       objCadastro.setCidade(cidadeCampo.getText());
+       objCadastro.setEmail(emailCampo.getText());
+       objCadastro.setTelefone(telefoneCampo.getText());
+       objCadastro.setEndereco(enderecoCampo.getText());
+       objCadastro.setMotivo(motivoCampo.getText());
+       
+       if (alemaoCampo.isSelected()) {
+           objCadastro.setAlemao(true);
+       }
+       
+       if (italianoCampo.isSelected()) {
+           objCadastro.setItaliano(true);
+       }
+       
+       if (inglesCampo.isSelected()) {
+           objCadastro.setIngles(true);
+       }
+       
+       if (espanholCampo.isSelected()) {
+           objCadastro.setEspanhol(true);
+       }
+       
+       if (japonesCampo.isSelected()) {
+           objCadastro.setJapones(true);
+       }
+       
+       if (francesCampo.isSelected()) {
+           objCadastro.setFrances(true);
+       }
+       
+       if (masculinoCampo.isSelected()) {
+           objCadastro.setSexo("M");
+       } else {
+           objCadastro.setSexo("F");
+       }
+       
+       limpar();
+       
+       objCadastro.setEstado((String) estadoCampo.getSelectedItem());
+       
+       JOptionPane.showMessageDialog(null, "O cadastro foi salvo!");
+    }//GEN-LAST:event_salvarActionPerformed
+
+    public void limpar() {
+        nomeCampo.setText("");
+        enderecoCampo.setText("");
+        telefoneCampo.setText("");
+        emailCampo.setText("");
+        cidadeCampo.setText("");
+        motivoCampo.setText("");
+        espanholCampo.setSelected(false);
+        alemaoCampo.setSelected(false);
+        inglesCampo.setSelected(false);
+        italianoCampo.setSelected(false);
+        francesCampo.setSelected(false);
+        japonesCampo.setSelected(false);
+        buttonGroup1.clearSelection();
+        estadoCampo.setSelectedIndex(-1);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -307,15 +379,17 @@ public class Formulario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox alemaoCampo;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextField cidadeCampo;
+    private javax.swing.JTextField emailCampo;
+    private javax.swing.JTextField enderecoCampo;
+    private javax.swing.JCheckBox espanholCampo;
+    private javax.swing.JComboBox<String> estadoCampo;
+    private javax.swing.JRadioButton femininoCampo;
+    private javax.swing.JCheckBox francesCampo;
+    private javax.swing.JCheckBox inglesCampo;
+    private javax.swing.JCheckBox italianoCampo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -327,13 +401,11 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JCheckBox japonesCampo;
+    private javax.swing.JRadioButton masculinoCampo;
+    private javax.swing.JTextField motivoCampo;
+    private javax.swing.JTextField nomeCampo;
+    private javax.swing.JButton salvar;
+    private javax.swing.JTextField telefoneCampo;
     // End of variables declaration//GEN-END:variables
 }
