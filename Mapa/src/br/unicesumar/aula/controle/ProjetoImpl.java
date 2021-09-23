@@ -2,6 +2,7 @@ package br.unicesumar.aula.controle;
  
 import br.unicesumar.aula.exceptions.DadoConsultadoException;
 import br.unicesumar.aula.modelo.Projeto;
+import java.util.ArrayList;
  
 import java.util.HashSet;
 import java.util.List;
@@ -14,12 +15,14 @@ public class ProjetoImpl implements ProjetoDAO {
  
     @Override
     public void adicionar(Projeto projeto) {
- 
+        projetos.add(projeto);
     }
  
     @Override
     public List<Projeto> listar() {
-        return null;
+        List<Projeto> projetoList = new ArrayList();
+        projetoList.addAll(projetos);
+        return projetoList;
     }
  
     @Override
