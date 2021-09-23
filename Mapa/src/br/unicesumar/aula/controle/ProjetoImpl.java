@@ -27,14 +27,26 @@ public class ProjetoImpl implements ProjetoDAO {
  
     @Override
     public Projeto consultarPorNome(String nome) throws DadoConsultadoException {
-        return null;
+        for (Projeto projeto: projetos) {
+            if (projeto.getNome().equalsIgnoreCase(nome)) {
+                return projeto;
+            }
+        }
+        throw new DadoConsultadoException("Projeto não encontrado com o nome " + nome);
     }
  
     @Override
     public Projeto alterar(String nome, Projeto projeto) throws DadoConsultadoException {
-        return null;
+        Projeto  projetoEncontrado = consultarPorNome(nome);
+        projetoEncontrado.setNome(projeto.getNome());
+        projetoEncontrado.setObjetivo(projeto.getObjetivo());
+        projetoEncontrado.setNecessidades(projeto.getNecessidades());
+        projetoEncontrado.setDataInicio(projeto.getDataInicio());
+        projetoEncontrado.setDataFinal(projeto.getDataFinal());
+        projetoEncontrado.setStatus(projeto.getStatus());
+        return projetoEncontrado;
     }
- 
+    
     @Override
     public void excluir(Projeto projeto) throws DadoConsultadoException, UnsupportedOperationException {
  
