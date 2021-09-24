@@ -49,11 +49,16 @@ public class ProjetoImpl implements ProjetoDAO {
     
     @Override
     public void excluir(Projeto projeto) throws DadoConsultadoException, UnsupportedOperationException {
- 
+        if (projetos.contains(projeto)) {
+            projetos.remove(projeto);
+            return;
+        }
+        throw new DadoConsultadoException("Não foi encontrado o projeto para exclusão");
     }
  
     @Override
     public void excluir(String nome) throws DadoConsultadoException, UnsupportedOperationException {
- 
+        Projeto projeto = consultarPorNome(nome);
+        this.excluir(projeto);
     }
 }
