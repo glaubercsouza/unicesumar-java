@@ -15,6 +15,13 @@ public class Juridica extends Pessoa{
         cnpj = tec.nextLine();
     }
     
+    @Override
+    public void imprime() {
+        System.out.println("Pessoa Jurídica!");
+        super.imprime();
+        System.out.println("Nome: " + getCnpj());
+    }
+    
     public String getCnpj() {
         return cnpj;
     }

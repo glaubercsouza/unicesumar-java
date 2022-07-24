@@ -15,6 +15,13 @@ public class Fisica extends Pessoa{
         System.out.println("Digite o CPF: ");
         cpf = tec.nextLine();
     }
+    
+    @Override
+    public void imprime() {
+        System.out.println("Pessoa Física!");
+        super.imprime();
+        System.out.println("CPF: " + getCpf());
+    }
 
     public String getCpf() {
         return cpf;

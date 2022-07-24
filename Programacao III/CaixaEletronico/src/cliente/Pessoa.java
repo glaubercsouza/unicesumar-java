@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public abstract class Pessoa {
     protected String nomePessoa;
-    protected Endereco e = new Endereco();
     protected String telefone;
+    protected Endereco e = new Endereco();
+
     public void cadastra() {
         Scanner tec = new Scanner(System.in);
         System.out.println("Digite o nome: ");
@@ -13,6 +14,11 @@ public abstract class Pessoa {
         System.out.println("Digite o telefone: ");
         telefone = tec.nextLine();
         e.cadastra();
+    }
+    
+    public void imprime() {
+        System.out.println("Nome: " + getNomePessoa());
+        System.out.println("Telefone: " + getTelefone());
     }
     
     public String getNomePessoa() {
@@ -39,7 +45,5 @@ public abstract class Pessoa {
         this.telefone = telefone;
     }
 
-    public void imprime() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
