@@ -1,15 +1,19 @@
 package cliente;
 
+import java.util.Scanner;
+
 public abstract class Pessoa {
     protected String nomePessoa;
-    protected Endereco endereco = new Endereco();
+    protected Endereco e = new Endereco();
     protected String telefone;
-    public abstract void cadastra();
-    
-    public Pessoa() {
-     super();
-        System.out.println("Executando o construtor de Pessoa");
-    }    
+    public void cadastra() {
+        Scanner tec = new Scanner(System.in);
+        System.out.println("Digite o nome: ");
+        nomePessoa = tec.nextLine();
+        System.out.println("Digite o telefone: ");
+        telefone = tec.nextLine();
+        e.cadastra();
+    }
     
     public String getNomePessoa() {
         return this.nomePessoa;
@@ -20,11 +24,11 @@ public abstract class Pessoa {
     }
     
     public Endereco getEndereco() {
-        return this.endereco;
+        return this.e;
     }
     
     public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+        this.e = endereco;
     }
     
     public String getTelefone() {
@@ -33,5 +37,9 @@ public abstract class Pessoa {
     
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public void imprime() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

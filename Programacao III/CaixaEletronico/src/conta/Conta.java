@@ -1,20 +1,23 @@
 package conta;
 
 import cliente.Pessoa;
+import java.util.Scanner;
 
 public class Conta {
-    private float saldo;
+    private double saldo;
     private int numConta;
-    private Pessoa titular;
+    private Pessoa titular = new Pessoa() {};
     private int tipoConta;
     
-    private final static float LIMITETRANSFERENCIA = 3000;
+    public Conta() {
+        this.setSaldo(0.0);
+    }
     
-    public float getSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
     
-    public void setSaldo(float saldo) {
+    public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
     
@@ -40,6 +43,26 @@ public class Conta {
     
     public void setTipoConta(int tipoConta) {
         this.tipoConta = tipoConta;
+    }
+    
+    public void cadastra() {
+        Scanner tec = new Scanner(System.in);
+        System.out.println("Digite o número da conta");
+        numConta = Integer.parseInt(tec.nextLine());
+        System.out.println("Tipo da conta: [1 - Conta Corrente][2 - Conta Poupança]");
+        tipoConta = Integer.parseInt(tec.nextLine());
+        System.out.println("Dados da Pessoa");
+        titular.cadastra();
+    }
+    
+    public void imprimeC() {
+        System.out.println("Número da Conta: " + getNumConta());
+        if(getTipoConta() == 1 ) {
+            System.out.println("Tipo de Conta: Conta Corrente");
+        } else if(getTipoConta() == 2) {
+            System.out.println("Tipo de Conta: Conta Poupança");
+        }
+        titular.imprime();
     }
     
 }
