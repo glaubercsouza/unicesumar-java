@@ -1,5 +1,5 @@
 package peixes;
 
-public class Pacu {
+public class Pacu extends Peixe{
     
 }
