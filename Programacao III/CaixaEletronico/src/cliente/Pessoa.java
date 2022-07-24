@@ -6,6 +6,11 @@ public abstract class Pessoa {
     protected String telefone;
     public abstract void cadastra();
     
+    public Pessoa() {
+     super();
+        System.out.println("Executando o construtor de Pessoa");
+    }    
+    
     public String getNomePessoa() {
         return this.nomePessoa;
     }

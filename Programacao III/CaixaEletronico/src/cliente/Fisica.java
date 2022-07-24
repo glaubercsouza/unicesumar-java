@@ -3,9 +3,16 @@ package cliente;
 
 import java.util.Scanner;
 
-
 public class Fisica extends Pessoa{
     private String cpf;
+    
+    public Fisica() {
+        System.out.println("Pessoa Física");
+    }
+    
+    public Fisica(String nome) {
+        nomePessoa = nome;
+    }
 
     public String getCpf() {
         return cpf;
