@@ -109,7 +109,7 @@ public class Paciente {
         this.setRG(tec.nextLine());
         System.out.print("CPF: ");
         this.setCPF(tec.nextLine());
-        cidade.cadastra();
+        cidade.cadastrar();
     }
     
     public void imprimePaciente() {
@@ -123,5 +123,10 @@ public class Paciente {
         System.out.println("RG: " + this.getRG());
         System.out.println("CPF: " + this.getCPF());
         cidade.imprimirCidade();
+    }
+    
+    public void listarPaciente() {
+        System.out.print(" | " + this.getCPF());
+        System.out.print(" | " + this.getNome());
     }
 }
