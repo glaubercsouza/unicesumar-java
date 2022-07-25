@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Cidade {
     private String nome, ddd;
-    private Uf uf = new uf();
+    private Uf uf = new Uf();
     
     public String getDdd() {
         return this.ddd;
@@ -36,12 +36,12 @@ public class Cidade {
         this.setNome(tec.nextLine());
         System.out.print("DDD: ");
         this.setDdd(tec.nextLine());
-        uf.cadastra();
+        uf.cadastrar();
     }
     
     public void imprimirCidade() {
         System.out.println("Cidade: " + this.getNome());
         System.out.println("DDD: " + this.getDdd());
-        uf.imprimir();
+        uf.imprimirUf();
     }
 }
