@@ -73,7 +73,7 @@ public class ExamePedidoExame {
         System.out.println("Cód | Descriç?o | Valor");
         for(int i = 0; i < contEx; i++) {
             System.out.print("   " + i);
-            ex[i].listarExame();
+            ex[i].imprimirExame();
             System.out.println();
         }
         System.out.println("Escolha um Exame: ");
@@ -105,7 +105,7 @@ public class ExamePedidoExame {
         Date dth2 = sdf4.parse(horaRetirarExame);
         this.setHoraPronto(dth2);
         
-        System.out.print("Valor: " + this.getValor());
+        System.out.println("Valor: " + this.getValor());
     }
 
     public void imprimir() {
@@ -122,5 +122,9 @@ public class ExamePedidoExame {
         
         String stringData13 = formataHora.format(this.getHoraPronto());
         System.out.println("Horário para retirar o Exame: " + stringData13);
+    }
+
+    private String getValor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -68,7 +68,7 @@ public class PedidoExame {
         System.out.println(" Código |   CRM   |  Nome  ");
         for(int i = 0; i < contM; i++) {
             System.out.print("  " + i);
-            m[i].listarMedico();
+            m[i].imprimirMedico();
             System.out.println();
         }
         System.out.println("Escolha um Médico");
@@ -81,7 +81,7 @@ public class PedidoExame {
         System.out.println("Código | Nome");
         for(int i = 0; i < contC; i++) {
             System.out.print("  " + i);
-            c[i].imrpimirConvenio();
+            c[i].imprimirConvenio();
             System.out.println();
         }
         System.out.println("Escolha um convênio");
